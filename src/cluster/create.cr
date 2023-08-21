@@ -232,6 +232,7 @@ class Cluster::Create
       ssh_allowed_networks: settings.ssh_allowed_networks,
       api_allowed_networks: settings.api_allowed_networks,
       high_availability: settings.masters_pool.instance_count > 1,
+      private_network: settings.private_network,
       private_network_subnet: settings.private_network_subnet,
       ssh_port: settings.ssh_port
     ).run

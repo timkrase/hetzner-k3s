@@ -5,6 +5,7 @@ class Hetzner::Firewall::Create
   getter hetzner_client : Hetzner::Client
   getter firewall_name : String
   getter private_network : String
+  getter private_network_subnet : String
   getter ssh_allowed_networks : Array(String)
   getter api_allowed_networks : Array(String)
   getter high_availability : Bool
@@ -17,7 +18,7 @@ class Hetzner::Firewall::Create
       @ssh_allowed_networks,
       @api_allowed_networks,
       @high_availability,
-      @private_network
+      @private_network,
       @private_network_subnet,
       @ssh_port
     )
